@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:background="#00ffffff" android:layout_width="fill_parent" android:layout_height="@dimen/grid_calendar_height" android:layoutDirection="ltr"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.AppCompatImageView android:gravity="center" android:id="@id/prev" android:layout_width="@dimen/icon_size" android:layout_height="@dimen/icon_size" android:layout_marginLeft="10.0dip" android:layout_marginTop="10.0dip" android:tint="?colorMonthSwitch" android:layout_alignParentLeft="true" app:srcCompat="@drawable/ic_keyboard_arrow_left" />
+    <androidx.appcompat.widget.AppCompatImageView android:gravity="center" android:id="@id/next" android:layout_width="@dimen/icon_size" android:layout_height="@dimen/icon_size" android:layout_marginTop="10.0dip" android:layout_marginRight="10.0dip" android:tint="?colorMonthSwitch" android:layout_alignParentRight="true" app:srcCompat="@drawable/ic_keyboard_arrow_right" />
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/RecyclerView" android:background="@drawable/latest" android:paddingBottom="@dimen/grid_calendar_padding_bottom" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toLeftOf="@id/next" android:layout_toRightOf="@id/prev" android:alpha="0.7" />
+</RelativeLayout>

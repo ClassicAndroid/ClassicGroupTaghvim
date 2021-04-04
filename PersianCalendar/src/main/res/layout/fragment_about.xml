@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:orientation="vertical" android:id="@id/about_layout" android:background="?colorBackground" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.appcompat.widget.LinearLayoutCompat android:gravity="center" android:orientation="vertical" android:paddingLeft="20.0sp" android:paddingTop="20.0sp" android:paddingRight="20.0sp" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <androidx.appcompat.widget.AppCompatTextView android:textSize="30.0sp" android:gravity="center" android:layout_gravity="center" android:id="@id/version2" android:paddingTop="20.0sp" android:paddingBottom="40.0sp" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <androidx.appcompat.widget.AppCompatImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/gpl3_logo" android:contentDescription="@string/gpl_logo" />
+        <androidx.appcompat.widget.AppCompatTextView android:id="@id/license" android:paddingTop="10.0sp" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</ScrollView>

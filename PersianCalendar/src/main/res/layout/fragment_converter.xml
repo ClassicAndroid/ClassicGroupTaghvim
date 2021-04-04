@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:orientation="vertical" android:id="@id/main_layout" android:background="?colorBackground" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.LinearLayoutCompat android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <androidx.appcompat.widget.LinearLayoutCompat android:orientation="vertical" android:padding="@dimen/view_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <androidx.appcompat.widget.AppCompatTextView android:textSize="@dimen/text_size_description" android:textColor="?colorTextSecond" android:layout_gravity="right" android:id="@id/calendarTypeTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/select_type_date" />
+            <androidx.appcompat.widget.AppCompatSpinner android:textSize="@dimen/text_size_description" android:textColor="?colorTextNormal" android:entries="@array/calendar_type" android:id="@id/calendarTypeSpinner" android:layout_width="fill_parent" android:layout_height="wrap_content" android:prompt="@string/day" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+        <androidx.appcompat.widget.LinearLayoutCompat android:orientation="horizontal" android:id="@id/containerDateSelector" android:padding="@dimen/converter_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:baselineAligned="false" android:weightSum="12.0">
+            <androidx.appcompat.widget.LinearLayoutCompat android:orientation="vertical" android:id="@id/containerDaySelector" android:padding="@dimen/converter_padding" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="3.0">
+                <androidx.appcompat.widget.AppCompatTextView android:textSize="@dimen/text_size_description" android:textColor="?colorTextSecond" android:layout_gravity="right" android:id="@id/converterLabelDay" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/day" />
+                <androidx.appcompat.widget.AppCompatSpinner android:textSize="30.0sp" android:textColor="?colorTextNormal" android:gravity="right" android:layout_gravity="right" android:id="@id/daySpinner" android:layout_width="fill_parent" android:layout_height="wrap_content" android:prompt="@string/select_day" android:foregroundGravity="right" android:spinnerMode="dialog" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+            <androidx.appcompat.widget.LinearLayoutCompat android:orientation="vertical" android:id="@id/containerMonthSelector" android:padding="@dimen/converter_padding" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="5.0">
+                <androidx.appcompat.widget.AppCompatTextView android:textSize="@dimen/text_size_description" android:textColor="?colorTextSecond" android:layout_gravity="right" android:id="@id/converterLabelMonth" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/mount" />
+                <androidx.appcompat.widget.AppCompatSpinner android:textSize="@dimen/text_size_description" android:textColor="?colorTextNormal" android:id="@id/monthSpinner" android:layout_width="fill_parent" android:layout_height="wrap_content" android:prompt="@string/select_mount" android:spinnerMode="dialog" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+            <androidx.appcompat.widget.LinearLayoutCompat android:orientation="vertical" android:id="@id/containerYearSelector" android:padding="@dimen/converter_padding" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="4.0">
+                <androidx.appcompat.widget.AppCompatTextView android:textSize="@dimen/text_size_description" android:textColor="?colorTextSecond" android:layout_gravity="right" android:id="@id/converterLabelYear" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/year" />
+                <androidx.appcompat.widget.AppCompatSpinner android:textSize="@dimen/text_size_description" android:textColor="?colorTextNormal" android:id="@id/yearSpinner" android:layout_width="fill_parent" android:layout_height="wrap_content" android:prompt="@string/select_year" android:spinnerMode="dialog" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+        <androidx.cardview.widget.CardView android:id="@id/info_day" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/card_margin" app:cardBackgroundColor="?colorCard">
+            <androidx.appcompat.widget.LinearLayoutCompat android:orientation="vertical" android:background="?selectableItemBackground" android:layout_width="fill_parent" android:layout_height="wrap_content" app:divider="?appDivider" app:dividerPadding="@dimen/divider_margin" app:showDividers="middle">
+                <RelativeLayout android:gravity="right" android:orientation="horizontal" android:padding="@dimen/card_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <androidx.appcompat.widget.AppCompatTextView android:textSize="@dimen/text_size_title" android:textColor="?colorTextPrimary" android:layout_gravity="right" android:id="@id/date0" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                </RelativeLayout>
+                <RelativeLayout android:gravity="right" android:id="@id/more_date" android:padding="@dimen/card_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <androidx.appcompat.widget.AppCompatImageView android:gravity="center" android:layout_width="@dimen/icon_size" android:layout_height="@dimen/icon_size" android:layout_marginLeft="@dimen/icon_margin" android:tint="?colorIcon" android:layout_toRightOf="@id/dateContainer" app:srcCompat="@drawable/ic_swap_vertical_circle" />
+                    <androidx.appcompat.widget.LinearLayoutCompat android:gravity="right" android:orientation="vertical" android:id="@id/dateContainer" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <androidx.appcompat.widget.AppCompatTextView android:textSize="@dimen/text_size_description" android:textColor="?colorTextNormal" android:id="@id/date1" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                        <androidx.appcompat.widget.AppCompatTextView android:textSize="@dimen/text_size_description" android:textColor="?colorTextNormal" android:id="@id/date2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/item_calendar_margin_top" />
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+                </RelativeLayout>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.cardview.widget.CardView>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</ScrollView>

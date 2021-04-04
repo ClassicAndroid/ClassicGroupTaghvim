@@ -1,0 +1,8 @@
+{
+  "logHandlers":[
+    {
+      "logHandlerClass": "com.pushpole.sdk.internal.log.handlers.SentryHandler",
+      "logLevel": "ERROR"
+    }
+  ]
+}

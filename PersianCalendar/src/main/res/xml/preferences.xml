@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.preference.PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.classicgroup1400.taghvimfarsi.view.preferences.ShapedPreferenceCategory android:title="@string/general">
+        <com.classicgroup1400.taghvimfarsi.view.preferences.ShapedListPreference android:entries="@array/languageNames" android:title="@string/language" android:key="AppLanguage" android:defaultValue="fa" android:entryValues="@array/languageKeys" />
+        <com.classicgroup1400.taghvimfarsi.view.preferences.ShapedListPreference android:entries="@array/themeNames" android:title="@string/skin" android:key="Theme" android:summary="@string/select_skin" android:defaultValue="LightTheme" android:entryValues="@array/themeKeys" />
+        <com.classicgroup1400.taghvimfarsi.view.preferences.ShapedCheckBoxPreference android:title="@string/persian_digits" android:key="PersianDigits" android:summary="@string/enable_persian_digits" android:defaultValue="true" />
+        <com.classicgroup1400.taghvimfarsi.view.preferences.ShapedListPreference android:entries="@array/islamicOffsetNames" android:title="@string/islamic_offset" android:key="islamicOffset" android:summary="@string/islamic_offset_summary" android:defaultValue="0" android:entryValues="@array/islamicOffsetKeys" />
+    </com.classicgroup1400.taghvimfarsi.view.preferences.ShapedPreferenceCategory>
+    <com.classicgroup1400.taghvimfarsi.view.preferences.ShapedPreferenceCategory android:title="@string/widget_notification_dashclock">
+        <com.classicgroup1400.taghvimfarsi.view.preferences.ShapedCheckBoxPreference android:title="@string/notify_date" android:key="NotifyDate" android:summary="@string/enable_notify" android:defaultValue="true" />
+        <com.classicgroup1400.taghvimfarsi.view.preferences.ShapedListPreference android:entries="@array/colorNames" android:title="@string/widget_text_color" android:key="SelectedWidgetTextColor" android:summary="@string/select_widgets_text_color" android:defaultValue="\#ffffffff" android:entryValues="@array/colorKeys" />
+        <com.classicgroup1400.taghvimfarsi.view.preferences.ShapedCheckBoxPreference android:title="@string/iran_time" android:key="IranTime" android:summary="@string/showing_iran_time" android:defaultValue="false" />
+        <com.classicgroup1400.taghvimfarsi.view.preferences.ShapedCheckBoxPreference android:title="@string/clock_on_widget" android:key="WidgetClock" android:summary="@string/showing_clock_on_widget" android:defaultValue="true" />
+        <com.classicgroup1400.taghvimfarsi.view.preferences.ShapedCheckBoxPreference android:title="@string/clock_in_24" android:key="WidgetIn24" android:summary="@string/showing_clock_in_24" android:defaultValue="true" />
+    </com.classicgroup1400.taghvimfarsi.view.preferences.ShapedPreferenceCategory>
+    <com.classicgroup1400.taghvimfarsi.view.preferences.ShapedPreferenceCategory android:title="@string/pray_times_calculation_setting">
+        <com.classicgroup1400.taghvimfarsi.view.preferences.ShapedListPreference android:entries="@array/prayMethodsNames" android:title="@string/pray_methods" android:key="SelectedPrayTimeMethod" android:summary="@string/pray_methods_calculation" android:defaultValue="Tehran" android:entryValues="@array/prayMethodsKeys" />
+        <com.classicgroup1400.taghvimfarsi.view.preferences.GPSLocationPreference android:title="@string/gps_location" android:key="dummy" android:summary="@string/gps_location_help" />
+        <com.classicgroup1400.taghvimfarsi.view.preferences.LocationPreference android:title="@string/location" android:key="Location" android:summary="@string/location_help" />
+        <com.classicgroup1400.taghvimfarsi.view.preferences.AthanNumericPreference android:digits="0123456789." android:title="@string/latitude" android:key="Latitude" android:defaultValue="0" android:inputType="numberDecimal" />
+        <com.classicgroup1400.taghvimfarsi.view.preferences.AthanNumericPreference android:digits="0123456789." android:title="@string/longitude" android:key="Longitude" android:defaultValue="0" android:inputType="numberDecimal" />
+        <com.classicgroup1400.taghvimfarsi.view.preferences.AthanNumericPreference android:digits="0123456789." android:title="@string/altitude" android:key="Altitude" android:summary="@string/altitude_praytime" android:defaultValue="0" android:inputType="numberDecimal" />
+    </com.classicgroup1400.taghvimfarsi.view.preferences.ShapedPreferenceCategory>
+    <com.classicgroup1400.taghvimfarsi.view.preferences.ShapedPreferenceCategory android:title="@string/athan" android:key="Athan">
+        <com.classicgroup1400.taghvimfarsi.view.preferences.AthanNumericPreference android:title="@string/athan_gap" android:key="AthanGap" android:summary="@string/athan_gap_summary" android:inputType="numberSigned" />
+        <com.classicgroup1400.taghvimfarsi.view.preferences.PrayerSelectPreference android:title="@string/athan_alarm" android:key="AthanAlarm" android:summary="@string/athan_alarm_summary" />
+        <com.classicgroup1400.taghvimfarsi.view.preferences.AthanVolumePreference android:title="@string/athan_volume" android:key="AthanVolume" android:summary="@string/athan_volume_summary" />
+    </com.classicgroup1400.taghvimfarsi.view.preferences.ShapedPreferenceCategory>
+</androidx.preference.PreferenceScreen>
